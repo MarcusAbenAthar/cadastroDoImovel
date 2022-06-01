@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 98vw;
+}
+
+section {
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+}
+
+form>input,
+form>select {
+    margin: 1em;
+}
+
+ul {
+    list-style: none;
+}
+
+ul a {
+    color: black;
+    text-decoration: none;
+}
+
+.descricao {
+    margin-top: 3em;
+    margin-right: 1em;
+}
+
+.fotoCasa {
+    max-width: 10em;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.botao {
+    margin-top: 1rem;
+}
