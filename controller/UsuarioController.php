@@ -2,7 +2,7 @@
 
 require_once '../model/Usuario.php';
 
-class UsuarioController extends Usuario
+class UsuarioController
 {
     /** 
      * Salvar o usuario submetido pelo form 

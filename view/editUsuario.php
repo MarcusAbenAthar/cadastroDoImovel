@@ -61,7 +61,7 @@
 <?php
 if (isset($_POST['editUsuario'])) {
     $usuario = call_user_func(array('UsuarioController', 'editar'));
-    header('Location:listUsuario.php?UsuarioEditadoComSucesso');
+    header('Location: listUsuario.php?UsuarioEditadoComSucesso');
 }
 ?>
 
