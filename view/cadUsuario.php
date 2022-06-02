@@ -12,13 +12,13 @@
 </head>
 
 <body>
-    <main>
+    <main class="center">
         <section>
             <div class="row">
                 <form name="cadUsuario" id="cadUsuario" method="post">
-                    Login:<input type="text" name="login" id="login"><br />
-                    Senha:<input type="password" name="senha1" id="senha1"><br />
-                    Confirmação de senha:<input type="password" name="senha2" id="senha2"><br />
+                    Login:<input class="input" type="text" name="login" id="login"><br />
+                    Senha:<input class="input" type="password" name="senha1" id="senha1"><br />
+                    Confirmação de senha:<input class="input" type="password" name="senha2" id="senha2"><br />
                     Permissão:<select name="permissao" id="permissao">
                         <option value="C">Comum</option>
                         <option value="A">Administrador</option>

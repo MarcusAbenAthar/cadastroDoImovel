@@ -15,17 +15,17 @@
     <h1>Imóveis</h1>
     <hr>
     <div>
-        <table style="top:40px;">
+        <table class="tabelaImoveis">
             <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Descrição</th>
-                    <th>Foto</th>
-                    <th>Valor</th>
-                    <th>Tipo</th>
+                <tr class="linhaImoveis">
+                    <th class="headImoveis">ID</th>
+                    <th class="headImoveis">Descrição</th>
+                    <th class="headImoveis">Foto</th>
+                    <th class="headImoveis">Valor</th>
+                    <th class="headImoveis">Tipo</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="tbody">
                 <?php
                 //importando o UsuarioController.php
                 require_once "../controller/ImovelController.php";
@@ -36,12 +36,12 @@
                 ?>
                         <tr>
                             <!-- Como o retorno é um objeto, devemos chamar os gets para mostrar o resultado -->
-                            <td><?php echo $imovel->getId(); ?></td>
-                            <td><?php echo $imovel->getDescricao(); ?></td>
-                            <td><?php echo "<img class='fotoCasa' src='" . $imovel->getFoto() . "'>" ?></td>
-                            <td><?php echo $imovel->getValor(); ?></td>
-                            <td><?php echo $imovel->getTipo(); ?></td>
-                            <td>
+                            <td class="colunaImoveis"><?php echo $imovel->getId(); ?></td>
+                            <td class="colunaImoveis"><?php echo $imovel->getDescricao(); ?></td>
+                            <td class="colunaImoveis"><?php echo "<img class='fotoCasa' src='" . $imovel->getFoto() . "'>" ?></td>
+                            <td class="colunaImoveis"><?php echo $imovel->getValor(); ?></td>
+                            <td class="colunaImoveis"><?php echo $imovel->getTipo(); ?></td>
+                            <td class="colunaImoveis">
                                 <a href="">Editar</a>
                                 <a href="">Excluir</a>
                             </td>

@@ -12,7 +12,7 @@
 </head>
 
 <body>
-    <main>
+    <main class="center">
         <section>
             <div class="row">
                 <form name="cadUsuario" id="cadUsuario" method="post">

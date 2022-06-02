@@ -21,7 +21,8 @@
                     <tr>
                         <th>Login</th>
                         <th>Permissão</th>
-                        <th><a href="cadUsuario.php">Novo</a></th>
+                        <th>Ações</th>
+                        <th><a href="cadUsuario.php">Novo Usuário</a></th>
                     </tr>
                 </thead>
                 <tbody>
