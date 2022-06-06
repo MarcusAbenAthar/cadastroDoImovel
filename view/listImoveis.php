@@ -13,52 +13,57 @@
 
 <body>
     <h1>Imóveis</h1>
-    <hr>
-    <div>
-        <table class="tabelaImoveis">
-            <thead>
-                <tr class="linhaImoveis">
-                    <th class="headImoveis">ID</th>
-                    <th class="headImoveis">Descrição</th>
-                    <th class="headImoveis">Foto</th>
-                    <th class="headImoveis">Valor</th>
-                    <th class="headImoveis">Tipo</th>
-                </tr>
-            </thead>
-            <tbody class="tbody">
-                <?php
-                //importando o UsuarioController.php
-                require_once "../controller/ImovelController.php";
-                //Chama uma função PHP que permite informar a classe e o método que será acionado
-                $imoveis = call_user_func(array('ImovelController', 'listar'));
-                if (isset($imoveis)) {
-                    foreach ($imoveis as $imovel) {
-                ?>
-                        <tr>
-                            <!-- Como o retorno é um objeto, devemos chamar os gets para mostrar o resultado -->
-                            <td class="colunaImoveis"><?php echo $imovel->getId(); ?></td>
-                            <td class="colunaImoveis"><?php echo $imovel->getDescricao(); ?></td>
-                            <td class="colunaImoveis"><?php echo "<img class='fotoCasa' src='" . $imovel->getFoto() . "'>" ?></td>
-                            <td class="colunaImoveis"><?php echo $imovel->getValor(); ?></td>
-                            <td class="colunaImoveis"><?php echo $imovel->getTipo(); ?></td>
-                            <td class="colunaImoveis">
-                                <a href="">Editar</a>
-                                <a href="">Excluir</a>
-                            </td>
-                        </tr>
-                    <?php
-                    }
-                } else {
-                    ?>
+    <table class="tableGeral">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Descrição</th>
+                <th>Foto</th>
+                <th>Valor</th>
+                <th>Tipo</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+            //importando o UsuarioController.php
+            require_once "../controller/ImovelController.php";
+            //Chama uma função PHP que permite informar a classe e o método que será acionado
+            $imoveis = call_user_func(array('ImovelController', 'listar'));
+            if (isset($imoveis)) {
+                foreach ($imoveis as $imovel) {
+            ?>
                     <tr>
-                        <td colspan="5">Nenhum registro encontrado</td>
+                        <!-- Como o retorno é um objeto, devemos chamar os gets para mostrar o resultado -->
+                        <td><?php echo $imovel->getId(); ?></td>
+                        <td><?php echo $imovel->getDescricao(); ?></td>
+                        <td><?php echo "<img class='fotoCasa' src='" . $imovel->getFoto() . "'>" ?></td>
+                        <td><?php echo $imovel->getValor(); ?></td>
+                        <td><?php echo $imovel->getTipo(); ?></td>
+                        <td>
+                            <a href="editImovel.php">Editar</a>
+                            /
+                            <a href="delImovel.php">Excluir</a>
+                        </td>
                     </tr>
                 <?php
                 }
+            } else {
                 ?>
-            </tbody>
-        </table>
-    </div>
+                <tr>
+                    <td colspan="5">Nenhum registro encontrado</td>
+                </tr>
+            <?php
+            }
+            ?>
+        </tbody>
+        </tr>
+    </table>
+
+    <tbody class="tbody">
+
+    </tbody>
+    </table>
     <!-- js bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

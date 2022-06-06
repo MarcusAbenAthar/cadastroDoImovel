@@ -16,7 +16,7 @@
         <section>
             <div class="row">
                 <form name="cadUsuario" id="cadUsuario" method="post">
-                    <label class="descricao" for="descricao">Descrição:</label><textarea type="text" name="descricao" id="descricao"></textarea><br />
+                    <label class="descricao" for="descricao">Descrição:</label><input type="text" name="descricao" id="descricao"></input><br />
                     Foto:<input type="url" name="foto" id="foto"><br />
                     Valor:<input type="text" name="valor" id="valor"><br />
                     Tipo:<select name="tipo" id="tipo">

@@ -16,7 +16,7 @@
         <h1>Usuários</h1>
         <hr>
         <div>
-            <table style="top:40px;">
+            <table class="tableGeral">
                 <thead>
                     <tr>
                         <th>Login</th>
@@ -40,6 +40,7 @@
                                 <td><?php echo $usuario->getPermissao(); ?></td>
                                 <td>
                                     <a href="editUsuario.php?id=<?php echo $usuario->getId(); ?>">Editar</a>
+                                    /
                                     <a href="">Excluir</a>
                                 </td>
                             </tr>
